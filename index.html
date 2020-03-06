@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>IMPLAN Salamanca, Gto</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/omc.ico" rel="icon">
+  <link href="img/omc.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Saira:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext" rel="stylesheet">
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="js/toastr.min.css">
+
+  <!-- =======================================================
+    Theme Name: Rapid
+    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+  <style media="screen">
+  .details-card {
+	background: #ecf0f1;
+}
+
+.card-content {
+	background: #f2f2f2;
+	border: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 1;
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card-img span {
+	position: absolute;
+    top: 10%;
+    right: 0rem;
+    background: #773c53;
+    padding: 6px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translate(-50%,-50%);
+}
+.card-img span h4{
+        font-size: 20px;
+        margin:0;
+        padding:5px 5px;
+         line-height: 0;
+
+}
+.card-desc {
+	padding: 1.0rem;
+}
+
+.card-desc h3 {
+	color: #000000;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.card-desc p {
+	color: #4d4d4d;
+    font-size: 16px;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0px;
+	margin-bottom: 0px;
+	padding: 0;
+  font-weight: 600;
+	font-family: 'Saira', sans-serif;
+}
+.btn-card{
+	background-color: #1ABC9C;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    padding: .84rem 2.14rem;
+    font-size: .81rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+.btn-card:hover {
+    background: orange;
+}
+a.btn-card {
+    text-decoration: none;
+    color: #fff;
+}
+/* End card section */
+.icono{
+  width: 60px;
+  height: auto;
+  margin-top: -13px;
+}
+.card {
+  display: inline-block;
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+  height: auto;
+
+  font-family: 'Saira', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #668399;
+  overflow: hidden;
+  border-color: #668399;
+}
+/* .card__icon {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  width: 50px;
+  line-height: 2rem;
+  text-align: center;
+}
+.card__circle {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 50%;
+  opacity: 0.2;
+  transition: all 0.4s ease-in-out;
+} */
+/* .card > p {
+  position: relative;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+} */
+.card--alt-1 {
+  background-color: #7E3F82;
+}
+.card--alt-2 {
+  background-color: #39B764;
+}
+.card--alt-3 {
+  background-color: #CC3F82;
+}
+.card--alt-4 {
+  background-color: #668399;
+}
+/* .card:hover .card__circle {
+  transform: scale(80);
+  opacity: 0.2;
+} */
+/* .card:hover > p,
+.card:hover .card__icon {
+  color: #303e48;
+} */
+a.list-group-item:before {
+  content: '';
+}
+
+.list-group-item {
+  margin-left: 0px;
+  padding-left: 15px;
+}
+
+.list-group-item .row > div.col-sm-5 {
+  margin-left: 10px;
+}
+
+.list-group-item .row > div.col-sm-6 {
+  margin-left: -10px;
+}
+
+.panel-title {
+  margin-top: 13px;
+  margin-right: 7px;
+}
+
+.list-group-item-heading,
+.list-group-item-text {
+  padding-left: 3px;
+}
+
+.form-inline {
+  padding-right: 1.1em;
+}
+
+.form-inline .btn-primary {
+  margin-top: 0.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-inline {
+    padding-right: 0;
+   }
+
+  .form-inline .btn-primary {
+    margin-top: 0;
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .list-group-item .row > div.col-sm-5 {
+    margin-left: 0px;
+    padding-left: 5px;
+  }
+  .list-group-item-heading {
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 250px) {
+  #search {
+    padding-left: 10px;
+  }
+}
+#aviso:hover{
+  text-decoration: underline;
+}
+.modal-title{
+  text-align:center;
+  color:#fcb600	;
+  font-size: 25px;
+  text-align:center;
+}
+.btn-danger{
+ background-color: #5a2d3f;
+ border-color: #5a2d3f;
+}
+.btn-danger:hover{
+  background-color: #773c53;
+}
+  </style>
+<!--  -->
+  <script type="text/javascript">
+function cargarindex(){
+ location.href="http://salamanca.gob.mx";
+}
+  </script>
+  <script type="text/javascript">
+  function comp(nameid) {
+$('.companies').addClass('hidden');
+$(nameid).removeClass('hidden').addClass('visible');
+}
+  </script>
+</head>
+
+<body>
+  <div class="modal fade" id="pmduoet">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header text-center" style="text-align:center;">
+          <h4 class="modal-title text-center" style="text-align:center;">¿Qué es el PMDUOET?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body " style="margin:2%; text-align:justify;">
+        Es el instrumento de planeación que permite al gobierno municipal formar una visión prospectiva de largo plazo, en el que se representa la dimensión territorial del desarrollo del municipio estableciendo la zonificación del territorio, determinando usos y destinos para el suelo; a su vez delimita las reservas, las áreas de conservación, crecimiento, mejoramiento y consolidación para definir el marco que servirá como propuesta en la creación de actividades sociales y económicas, desde una perspectiva integral, del mismo modo atenderá aspectos sociales, ambientales y económicos dentro de la ciudad.
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" style="border-color:#5a2d3f;">Cerrar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="modal fade" id="pmduoet-zmis">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header text-center" style="text-align:center;">
+          <h4 class="modal-title text-center" style="text-align:center;">¿Qué es el PMDUOET-ZMIS?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body " style="margin:2%; text-align:justify;">
+        Este instrumento tiene como objetivo lograr la planeación y el ordenamiento del territorio a largo plazo que permita orientar de manera integral y equitativa la Zona Metropolitana de Irapuato-Salamanca, generando un diagnóstico estratégico y participativo con la intención de resolver las problemáticas y propiciar las aptitudes que beneficiaran a ambos municipios.
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" style="border-color:#5a2d3f;">Cerrar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="modal fade" id="pmd-2040">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header text-center" style="text-align:center;">
+          <h4 class="modal-title text-center" style="text-align:center;">¿Qué es el PMD-2040?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body " style="margin:2%; text-align:justify;">
+        Instrumento de planeación municipal alineado al Plan Estatal de Desarrollo 2040, el cual contiene una visión, que mediante la proyección de objetivos y estrategias de largo plazo definirán el rumbo a seguir para alcanzar un desarrollo integral, asegurando la participación de la sociedad en las acciones del gobierno municipal, representando la situación actual y la situación futura deseada.
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" style="border-color:#5a2d3f;">Cerrar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+    <a type="button" name="boton_pleca" style="border:none;" onclick="cargarindex()">
+       <img src="../images/pleca1.jpg" alt="" class="img-fluid" style="height:auto; width:auto; border-radius:none;" >
+     </a>
+    <!-- <div id="topbar">
+      <div class="container">
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span></span></a></h1>
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
+      <!-- navbar -->
+
+      <nav class="main-nav float-right d-none d-lg-block" style="margin:1.3%;">
+
+        <ul>
+          <li class="active"><a href="#intro" style="font-weight:bold; font-size:17px;">Inicio</a></li>
+          <li><a href="#about" style="font-weight:bold; font-size:17px; color:none;">Acerca de Nosotros</a></li>
+          <li><a href="#services" style="font-weight:bold; font-size:17px; color:none;">Registro</a></li>
+          <li><a href="#portfolio" style="font-weight:bold; font-size:17px; color:none;">Registro de Observaciones</a></li>
+          <!-- <li><a href="#team">Team</a></li> -->
+          <!-- <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a href="#footer">Contact Us</a></li> -->
+        </ul>
+      </nav><!-- .main-nav -->
+
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <!-- <div class="col-md-6 intro-info order-md-first order-last">
+          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div> -->
+
+        <div class="col-md-12 intro-img order-md-last order-first text-center">
+          <img src="img/Btn_Consulta.jpg" alt="" class="img-fluid" style="margin-top:25%;">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+  <!-- <section id="call-to-action" class=" wow fadeInUp" style="background-color:#f5f8fd;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center text-center">
+          <span class="" style="color:gray;">
+              <br><br>
+              <span style="text-transform:none; text-align:center; font-style:normal; font-size:16px;">
+
+                <br><br> </span> &nbsp;
+        </span>
+          </div>
+      </div>
+    </div>
+  </section> -->
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about" class="wow fadeInUp">
+      <div class="col-lg-12 text-center text-center" style="background-color:#f2f2f2;">
+        <span class="" style="color:gray;">
+            <div class="about-content">
+              <h2>Acerca de Nosotros</h2><br>
+            </div>
+        </div>
+      <div class="container">
+        <div class="row">
+          <div class="about-content text-center " >
+            <!-- <h2>Acerca de Nosotros</h2><br> -->
+            <!-- <hr style="height:2px; border:none; color:gray; background-color:gray; width:20%; text-align:left; margin-top: -10px; margin-left:-2px;"><br> -->
+            <h5 style="color:#773c53; font-weight:300;">El Sistema de Planeación es un mecanismo integral, estratégico y participativo a través del cual la sociedad organizada puede establecer procesos de coordinación para el desarrollo de la entidad.
+Por lo anterior, el IMPLAN extiende la invitación a la ciudadanía en general para la consulta pública como parte importante del proceso de actualización de los 3 instrumentos base del Sistema Municipal de Planeación
+.</h5>
+            <br>
+
+          </div><br>
+          <div class="col-lg-4 col-md-4">
+            <div class="about-img">
+              <img src="img/planosalamanca.png" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-8" >
+            <div class="about-content text-justify" >
+              <!-- <h2>Acerca de Nosotros</h2> -->
+              <!-- <hr style="height:2px; border:none; color:gray; background-color:gray; width:20%; text-align:left; margin-top: -10px; margin-left:-2px;"><br> -->
+              <!-- <h4>El sistema de planeación es un mecanismo permanente de Planeación Integral, Estratégica y Participativa, a través del cual la sociedad organizada, establecen procesos de coordinación para
+              el desarrollo de la entidad, por lo anterior el Ing. Alberto Espinosa Zertuche, titular del Instituto Municipal de Planeación (IMPLAN) extiende la invitación a la ciudadanía para participar en la Consulta como parte integral del proceso de actualización de los tres instrumentos base del Sistema Municipal de Planeación.</h4> -->
+
+              <br>
+                <div class="">
+                  <div class="" style="">
+                    <img src="img/Diagrama.png" alt="" class="img-fluid">
+                    <a href="#" data-toggle="modal" data-target="#pmduoet"><img src="img/Diagrama_btn1.png" alt="" class="img-fluid" style="float:right; margin-top:-51.7%; width:35%;" title="Programa Municipal de Desarrollo Urbano y Ordenamiento Ecológico y Territorial del municipio de Salamanca"></a>
+                    <a href="#"  style="background-color:none; border-color:none;" data-toggle="modal" data-target="#pmduoet-zmis">
+                      <img src="img/Diagrama_btn2.png" alt="" class="img-fluid" style=" margin-top:-49%; margin-left: 73%; width:39%;" title="Programa Municipal de Desarrollo Urbano y Ordenamiento Ecológico y Territorial de la Zona Metropolitana Irapuato Salamanca"></a>
+                    <a href="#" data-toggle="modal" data-target="#pmd-2040"><img src="img/Diagrama_btn3.png" alt="" class="img-fluid" style=" margin-top:-9.4%; margin-left: 58%; width:35%;" title="Plan Municipal de Desarrollo 2040"></a>
+                  </div>
+                </div>
+
+              <!-- <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p> -->
+              <br><br><br><br>
+              <!-- <ul style="font-size:14px; letter-spacing: normal;" class="">
+                <li class="features wow bounceInUp clearfix"><h4><i class="ion-android-checkmark-circle " style="font-size:30px;"></i>
+                  &nbsp;Plan Municipal de Desarrollo <strong style="font-weight:600;">PMD 2040</strong>.</h4></li>
+                  <li class="features wow bounceInUp clearfix"><h4><i class="ion-android-checkmark-circle" style="font-size:30px;"></i>
+                  Programa Municipal de Desarrollo Urbano y Ordenamiento Ecológico y Territorial del municipio de Salamanca
+                  <strong style="font-weight:600;">PMDUOET</strong>.</h4></li>
+                  <li class="features wow bounceInUp clearfix"><h4><i class="ion-android-checkmark-circle" style="font-size:30px;"></i>
+                  Programa Municipal de Desarrollo Urbano y Ordenamiento Ecológico y Territorial de la Zona Metropolitana Irapuato Salamanca
+                  <strong style="font-weight:600;">PDUOET ZM Irapuato-Salamanca</strong>.</h4></li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+      </div><br><br>
+
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="call-to-action" class=" wow fadeInUp" style="background-color:none;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center text-center">
+            <span class="" style="color:gray;">
+                <br><br>
+                <h6 style="text-transform:none; text-align:center; font-style:normal; font-size:28px; color:gray;">
+                  El IMPLAN agradece su interés en participar en este ejercicio de planeación. Favor de llenar sus datos para poder tener el acceso para la descargar de los instrumentos de planeación y posteriormente enviar sus observaciones.
+                  <br></h6> &nbsp;
+          </span>
+            </div>
+        </div>
+      </div>
+    </section><!-- #call-to-action -->
+    <section id="services" class="" class="img-fluid">
+      <div class="col-lg-12 text-center text-center" style="background-color:#f2f2f2;">
+        <span class="" style="color:gray;">
+            <div class="section-header"><br><br>
+              <h3>Registro</h3><br>
+            </div>
+        </div>
+      <div class="container">
+        <header class="section-header text-center" style="">
+          <br>
+        </header><br><br>
+        <div class="row wow fadeInDown">
+          <div class="col-sm-5">
+              <div class="form-group">
+                <label for="name"><h6>Nombre</h6></label>
+                <input type="text" class="form-control" id="name" placeholder="Ingresar Nombre">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1"><h6> Correo Electrónico </h6></label>
+                <input type="email" class="form-control" id="email" placeholder="Ingresar Correo Electrónico">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1"><h6>Dirección</h6></label>
+                <input type="text" class="form-control" id="address" placeholder="Ingresar Dirección">
+              </div>
+              <div class="form-group">
+                <label for="phone"><h6>Teléfono</h6></label>
+                <input type="text" class="form-control" id="phone" placeholder="Ingresar Teléfono">
+                <a href="http://seguridad.guanajuato.gob.mx/declaracion-de-privacidad/" style="" target="_blank" id="aviso"> Aviso de privacidad</a>
+                <!-- <a href="http://www.salamanca.gob.mx/Transparencia/AVISO%20DE%20PRIVACIDAD%20INTEGRAL.pdf" style="" target="_blank" id="aviso"> Aviso de privacidad</a> -->
+              </div>
+              <button id="sm" class="btn btn-default sm">Registrarse</button><br><br>
+          </div>
+          <div class="col-sm-1">
+
+          </div>
+          <div class="col-sm-6 text-justify"style="font-size:14px;">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="card-content">
+                    <div class="card-img">
+                        <!-- <img src="https://placeimg.com/380/230/nature" alt=""> -->
+                        <br><br>
+                      <p class="white-text " style="margin-top:-1%; margin-bottom:0; " >
+                        <div class="card-desc">
+                            <p style="font-size:15px; letter-spacing:1px;">Durante los meses de octubre y noviembre del presente se estará realizando dicha consulta pública. Acércate a nosotros.</p>
+                        </div>
+                        </p>
+
+                        <span><h4><i class="ion-android-alert "></i> </h4></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <br><br>
+            <h6>El <strong style="font-weight:500;">PMD2040</strong> es el documento rector que contiene los objetivos y estrategias para el desarrollo del municipio con una visión de largo plazo, debiendo ser evaluado y actualizado cuando menos cada 5 años o cuando el Gobierno del Estado realiza la actualización de sus instrumentos.</h6>
+            <h6>El <strong style="font-weight:500;">PMDUOET</strong> se encarga de la territorialidad a los objetivos y estrategias del Plan Municipal de Desarrollo 2040 y que sirven de base al Programa de Gobierno para la gestión de actividades de la administración pública municipal, de forma que aseguren el rumbo y cumplimiento.</h6>
+            <h6>El proceso de consulta de los instrumentos responde a lo estipulado en el artículo 58, fracciones IV, incisios a), b) y c), V y VI del Código Territorial para el Estado y los Municipios de Guanajuato, y 44 fracción I de la Ley de Planeación para el Estado de Guanajuato.</h6>
+            <h6> Cabe mencionar que los ciudadanos que deseen participar en la consulta, pueden hacerlo en esta página.</h6><br>
+
+            <!-- <h6 style="color:#fcb600;"> Nota: Para poder descargar los archivos debes registrarte primero. Gracias.</h6> -->
+          </div>
+
+          <div class="form-group fadeInUp" id="downloads"
+          style="background-color:#f2f2f2; margin-left:9px; -webkit-box-shadow: 0 8px 6px -6px #ccc; -moz-box-shadow: 0 8px 6px -6px #ccc; box-shadow: 0 8px 6px -6px #ccc;">
+            <div class="container text-center" ><br>
+              <h5 style="color:black; letter-spacing:1px; font-weight:bold;">DESCARGAS</h5>
+            </div>
+            <hr style="color: white; height: 2px; background-color:white;"><br>
+          <div class="row">
+            <div class="container">
+              <div class="row counters">
+                <div class="col-lg-4 col-12 text-center">
+                  <div class="box">
+                    <div class="icon" style="background: #fceef3;"><img src="img/municipal1.png" alt="" class="img-fluid icono"></div>
+                    <h6 class="titulodesc"><a href="descargas/PMDUOET.rar">Descarga programa municipal PMDUOET</a></h6>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-12 text-center">
+                  <div class="box">
+                    <div class="icon" style="background: #fff0da;"><img src="img/metropolitano2.png" alt="" class="img-fluid icono"></div>
+                    <h4 class="titulodesc"><a href="descargas/metropolitano.rar">Descarga programa metropolitano PMDUOET</a></h4>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-12 text-center">
+                  <div class="box">
+                    <div class="icon" style="background: #e6fdfc;"><img src="img/vision2.png" alt="" class="img-fluid icono"></div>
+                    <h4 class="titulodesc descargas"><a href="descargas/Plan Estrategico_Salamanca 2040.rar" class="descargas">Descarga programa Estratégico PMD2040</a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br><br>
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+
+
+    <!--==========================
+      Features Section
+    ============================-->
+
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio" class="wow fadeIn img-fluid">
+      <div class="col-lg-12 text-center text-center" style="background-color:#f2f2f2;">
+        <span class="" style="color:gray;">
+            <div class="section-header"><br><br>
+              <h3>Registro de Observaciones</h3><br>
+            </div>
+        </div>
+      <div class="container">
+        <header class="section-header">
+          <!-- <h3 class="section-title">Registro de Observaciones</h3> -->
+          <!-- <hr style="height:2px; border:none; color:gray; background-color:gray; width:10%; text-align:center; margin: 0 auto; "><br> -->
+        </header>
+        <div class="row">
+          <div class="col-sm-12">
+            <br><br>
+              <div class="form-group">
+                <label for="obsname"><h6>Nombre</h6></label>
+                <input type="text" class="form-control" id="obsname" placeholder="Ingresar Nombre">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1"><h6>Correo Electrónico</h6></label>
+                <input type="email" class="form-control" id="obsemail" placeholder="Ingresar Correo Electrónico">
+              </div>
+              <label class="form-group" for="exampleInputEmail1" style="font-size: 14px;font-weight: 500;padding-left:2px;"><h6>Observaciones:</h6></label>
+              <div class="form-group">
+                <textarea id="obs" class="form-control" rows="10" ></textarea>
+                <span style="font-style:italic;"> <strong>Nota:</strong> Ingresar el Nombre y Correo Electrónico registrados previamente.</span>
+              </div>
+              <button id="obsreg" class="btn btn-default sm">Registrar Observación</button>
+              <div class="form-group" id="downloads">
+                <br>
+              </div>
+          </div>
+        </div>
+        <div class="row portfolio-container">
+        </div>
+      </div>
+    </section><!-- #portfolio -->
+
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class=" img-fluid">
+    <div class="">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-12">
+            <div class="" style="text-align:center; " target="_blank">
+      <br>
+      <a href="https://www.facebook.com/GobSalamanca/">
+      <img src="data:image/png;base64,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">
+      </a>
+      <a href="https://twitter.com/GobSalamanca" target="_blank">
+        <img src="data:image/png;base64,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">
+      </a>
+      <!-- <a href="https://twitter.com/GobSalamanca" target="_blank">
+    <img src="data:image/png;base64,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">
+      </a> -->
+      </div>
+      <br>
+    <div class="container">
+      <!-- <div class="row" style="background-color:none; margin-left:3%; margin-right:3%; padding:1%; margin-bottom:0; text-align:center;">
+        <div class="col-sm-2 emergencias">
+          <span> 64  234  56   ext.  34</span>
+          <span>911</span><br>
+        </div>
+        <div class="col-sm-2 emergencias">
+          <span>Policia Municipal</span><br>
+          <span> 64  234  56   ext.  34</span>
+        </div>
+        <div class="col-sm-2 ">
+          <span style="font-size:14px; font-weight: bold; margin-top:20px;  color:#ffffff;">Menú</span><br><br>
+          <span style="font-size:14px; font-weight: bold; margin-top:20px;  color:#ffffff;">Mapa del sitio</span><br><br>
+          <span style="font-size:12px; margin-top:20px; text-align:left;"> <a href="index.html" style="color:#ffffff;"> INICIO</a></span><br>
+          <span style="font-size:12px; margin-top:20px; text-align:left;"> <a href="gobierno.html" style="color:#ffffff;"> GOBIERNO</a></span><br>
+          <span style="font-size:12px; margin-top:20px; text-align:left;"> <a href="directorio.html" style="color:#ffffff;"> DIRECTORIO</a></span><br>
+          <span style="font-size:12px; margin-top:20px; text-align:left;"> <a href="#" style="color:#ffffff;"> TRANSPARENCIA</a></span><br>
+          <span style="font-size:12px; margin-top:20px; text-align:left;"> <a href="gaceta.html" style="color:#ffffff;"> GACETA</a></span><br>
+          <span style="font-size:12px; margin-top:20px; text-align:left;"> <a href="tramitesyservicios.html" style="color:#ffffff;"> TRÁMITES Y SERVICIOS</a></span><br><br>
+        </div>
+
+        <div class="col-sm-2 ">
+          <span style="font-size:14px; font-weight: bold; margin-top:20px; text-align:center; color:#ffffff;">Contácto</span><br><br>
+          <span style="font-size:12px; margin-top:20px; text-align:center; color:#ffffff;">
+            <span style="color:#ffffff;"  class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;
+          (&nbsp;464&nbsp;)&nbsp;&nbsp; 64&nbsp; 1 &nbsp;45 &nbsp;00</span><br>
+          <br>
+          <span style="font-size:12px; margin-top:20px; text-align:center; color:#ffffff;">
+            <a target="_blank" href="https://www.google.com.mx/maps/search/Portal+Octaviano+Mu%C3%B1oz+Ledo+s%2Fn,++Zona+Centro+salamanca+gto/@20.5697975,-101.20262,17z/data=!3m1!4b1?hl=es">
+            <span style="color:#ffffff;" class="glyphicon glyphicon-map-marker" ></span></a>&nbsp;&nbsp;
+            <a style="color:#ffffff;" target="_blank"
+            href="https://www.google.com.mx/maps/search/Portal+Octaviano+Mu%C3%B1oz+Ledo+s%2Fn,++Zona+Centro+salamanca+gto/@20.5697975,-101.20262,17z/data=!3m1!4b1?hl=es">
+            Portal Octaviano Muñoz Ledo s/n, &nbsp;Zona Centro</a></span>
+
+        </div>
+
+        <div class="col-sm-3 emergencias">
+          <span>Tránsito y Transporte</span><br>
+          <span> 64  234  56   ext.  34</span>
+        </div>
+
+      </div> -->
+<!-- <div class="container text-center">
+<p>
+  <span style="font-size:12px; margin-top:20px; text-align:center; font-style: italic;color:#ffffff;">Última Actualización:
+    &nbsp;&nbsp; 01/08/2019</span>
+</p>
+</div> -->
+      <p style="font-size:14px; margin-top:20px; text-align:center; color:#ffffff;">
+        <img style="margin-top:-0.5%;" src="">
+        <span style="color:#ffffff;"  class="fa fa-phone"></span>&nbsp;&nbsp;
+        (&nbsp;464&nbsp;)&nbsp;&nbsp; 64&nbsp; 1 &nbsp;45 &nbsp;00 <br>
+        <!-- <img style="margin-top:-0.5%;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABOgAAAToBzZiNlQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEYSURBVDiNxZTBSkJBFIb/Ey5yk6tQ2kUvUOEuEve9hhRFzxC08g1Ceg034sKNuAnxEVyKtMlFGrn52lzhMI7X0YJ+GJgz5z/fnMNcrvTHsm0G4EzSaRaOzWy8103AJTBgXX3gfFdYHZhHYCt9ArVUWAl4z4GtNAWOwvqDCPNW0rGLPyQ1szVz52VJjZQOu0EnVy5XC3KdFODIFSyCnAFfLj8M62MjT9y+6DuUdC3pcINXklSIAHuSblzcBlrZ/j7izRdwEoy1SQugEtavjWxmE0mt8DyiFzObJvgkoEL+hz0HykkwB33OAT7tBMuABWAYgb0BscdMglaBpYN9Axd7wRz00QEftvlT/ocm6VUSku7MjF91+O/6AThnjSYmMXHuAAAAAElFTkSuQmCC" alt="">
+         -->
+        <a target="_blank" href="https://www.google.com.mx/maps/search/Portal+Octaviano+Mu%C3%B1oz+Ledo+s%2Fn,++Zona+Centro+salamanca+gto/@20.5697975,-101.20262,17z/data=!3m1!4b1?hl=es">
+        <span style="color:#ffffff;" class="fa fa-map-marker" ></span></a>&nbsp;&nbsp;
+        <a style="color:#ffffff;" target="_blank"
+        href="https://www.google.com.mx/maps/search/Portal+Octaviano+Mu%C3%B1oz+Ledo+s%2Fn,++Zona+Centro+salamanca+gto/@20.5697975,-101.20262,17z/data=!3m1!4b1?hl=es">
+        Portal Octaviano Muñoz Ledo s/n, &nbsp;Zona Centro</a><br>
+
+<!-- contador de visitas, el que se usará -->
+  <span style="display:none;" ><a href='https://www.symptoma.es/' target="_blank">Symptoma.es</a></span> <span class="text-center" style="font-size:12px;">Visitas</span>
+  <!-- <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=58e82767418ed1d5a77aefbb7d33e597d4e57673'></script> -->
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/587830/t/5"></script>
+
+<!--  -->
+<!-- <img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits"> -->
+
+<!-- <script type="text/javascript" src="https://freehitcounters.org/count/2vry"></script><br> -->
+ <!-- <a href='https://www.symptoma.es/' target="_blank">Symptoma.es</a>
+ <script type='text/javascript' src='https://www.whomania.com/ctr?id=27f645f8cbc901625e9a51ace02504ace4ac60c9'></script> -->
+        <!-- Última Actualización: &nbsp;&nbsp; 31/07/2019. -->
+
+<!-- <script src="https://www.powr.io/powr.js?platform=embed"></script><div class="powr-hit-counter" id="bf31d171_1571324134"></div> -->
+
+<!-- <div>
+  <img src="http://www.quick-counter.net/aip.php?tp=bb&tz=America%2FMexico_City" alt="HTML hit counter - Quick-counter.net" border="0" />
+    </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/toastr.min.js"></script>
+
+</body>
+</html>
